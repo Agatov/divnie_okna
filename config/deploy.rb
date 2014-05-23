@@ -1,8 +1,8 @@
 # Bundler tasks
 require 'bundler/capistrano'
 
-set :application, "volvo"
-set :repository,  "git@github.com:Agatov/volvo"
+set :application, "divnie_okna"
+set :repository,  "git@github.com:Agatov/divnie_okna"
 
 set :scm, :git
 

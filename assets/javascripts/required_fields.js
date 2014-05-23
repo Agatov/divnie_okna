@@ -3,7 +3,7 @@
 	$(function() {
 		$('#form1').each(function(){
 			var form = $(this),
-				btn = form.find('.btn_submit1');
+				btn1 = form.find('.btn_submit1');
 			
 			form.find('.rfield').addClass('empty_field');
 			
@@ -30,17 +30,17 @@
 				checkInput();
 				var sizeEmpty = form.find('.empty_field').size();
 				if(sizeEmpty > 0){
-					if(btn.hasClass('disabled')){
+					if(btn1.hasClass('disabled')){
 						return false
 					} else {
-						btn.addClass('disabled')
+                        btn1.addClass('disabled')
 					}
 				} else {
-					btn.removeClass('disabled')
+                    btn1.removeClass('disabled')
 				}
 			},500);
 
-			btn.click(function(){
+			btn1.click(function(){
 				if($(this).hasClass('disabled')){
 					lightEmpty();
 					return false
@@ -50,12 +50,13 @@
             url: '/orders.json',
             data: $('#form1').serialize(),
             success: function () {
-			  	$("#form1 #name").val("");
-				$("#form1 #phone").val("");
-				$("#form1 #date").val("");
-                alert('Спасибо! Ваша заявка отправлена.');
+
             }
           });
+            $("#form1 #name").val("");
+            $("#form1 #phone").val("");
+            $("#form1 #date").val("");
+            alert('Спасибо! Ваша заявка отправлена.');
 				}
 			});
 			
@@ -64,7 +65,7 @@
 		
 		$('#form2').each(function(){
 			var form = $(this),
-				btn = form.find('.btn_submit2');
+				btn2 = form.find('.btn_submit2');
 			
 			form.find('.rfield').addClass('empty_field');
 			
@@ -91,17 +92,17 @@
 				checkInput();
 				var sizeEmpty = form.find('.empty_field').size();
 				if(sizeEmpty > 0){
-					if(btn.hasClass('disabled')){
+					if(btn2.hasClass('disabled')){
 						return false
 					} else {
-						btn.addClass('disabled')
+                        btn2.addClass('disabled')
 					}
 				} else {
-					btn.removeClass('disabled')
+                    btn2.removeClass('disabled')
 				}
 			},500);
 
-			btn.click(function(){
+			btn2.on ('click', function(){
 				if($(this).hasClass('disabled')){
 					lightEmpty();
 					return false
@@ -111,12 +112,12 @@
             url: '/orders.json',
             data: $('#form2').serialize(),
             success: function () {
-			  	$("#form2 #name").val("");
-				$("#form2 #phone").val("");
-				$("#form2 #date").val("");
-                alert('Спасибо! Ваша заявка отправлена.');
             }
           });
+            $("#form2 #name").val("");
+            $("#form2 #phone").val("");
+            $("#form2 #date").val("");
+            alert('Спасибо! Ваша заявка отправлена.');
 				}
 			});
 			
