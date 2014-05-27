@@ -5,8 +5,27 @@
     <title>
       Дивные Окна
     </title>
+    <script type="text/javascript" language="javascript">
+      $(function() {
+
+        $('#foo2').carouFredSel({
+          prev: '#prev2',
+          next: '#next2',
+          pagination: "#pager2",
+          auto: false
+        });
+
+      });
+    </script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.fancybox').fancybox();
+    });
+  </script>
   </head>
   <body>
+    <%= yield %>
     <%= erb :metrika %>
 
   </body>
