@@ -25,7 +25,7 @@ class Application < Sinatra::Base
 
     css :application, '/css/application.css', %w(/css/main.css /css/jquery.fancybox.css)
     #js :application, '/js/application.js', %w( /js/jquery-1.11.1.js /js/jquery.carouFredSel-5.2.2-packed.js /js/jquery.xfade-1.0.min.js /js/organictabs.jquery.js /js/required_fields.js )
-    js :application, '/js/application.js', %w( /js/jquery-1.11.1.js /js/jquery.fancybox.js /js/jquery.xfade-1.0.min.js)
+    js :application, '/js/application.js', %w( /js/jquery-1.11.1.js /js/jquery.fancybox.js /js/jquery.xfade-1.0.min.js /js/organictabs.jquery.js /js/required_fields.js /js/jquery.carouFredSel-5.2.2-packed.js)
 
     css_compression :sass
     js_compression :jsmin
