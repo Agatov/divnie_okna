@@ -36,7 +36,7 @@ class Application < Sinatra::Base
 
   post '/orders.json' do
 
-    message = "#{params[:order][:username]}. #{params[:order][:phone]}. #{params[:order][:date]}"
+    message = "#{params[:name][:username]}. #{params[:order][:phone]}. #{params[:order][:date]}"
 
     Pony.mail ({
         to: 'abardacha@gmail.com, mkt3@divnie.ru',
